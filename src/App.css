@@ -1,0 +1,268 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background-color: #1e293b;
+  color: white;
+}
+
+/* Logo */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  gap: 25px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: #38bdf8;
+}
+
+
+/* Cart container */
+.cart {
+  position: relative;
+  display: inline-block;
+}
+
+/* Cart icon */
+.cart img {
+  width: 30px;
+  filter: brightness(0) invert(1); /* makes icon white */
+}
+
+/* Count badge */
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid #1e293b; /* matches header bg */
+}
+
+
+/* 🔽 Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .nav {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .cart {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+}
+
+
+.cart img {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  filter: brightness(0) invert(1);
+}
+
+.cart img:hover {
+  transform: scale(1.1);
+}
+
+
+/* Section */
+.products {
+  padding: 30px 20px;
+  background-color: #f8fafc;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.products h2 {
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+/* Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+/* Card */
+.product-card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Image */
+.product-card img {
+  width: 60%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 5px;
+}
+
+/* Text */
+.product-card h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.price {
+  color: #2563eb;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 15px 0;
+}
+
+/* Button */
+.product-card button {
+  padding: 11px 18px;
+  border: none;
+  background-color: #1e293b;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+  font-size: 14px;
+  flex-grow: 1;
+  margin-top: auto;
+}
+
+.product-card button {
+  margin-bottom: 8px;
+}
+
+.product-card button:hover {
+  background-color: #0f172a;
+  transform: scale(1.02);
+}
+
+.remove-btn{
+  background-color: #ff5722 !important;
+  margin-left: 0;
+  margin-top: 8px;
+}
+
+.remove-btn:hover {
+  background-color: #e64a19 !important;
+}
+
+.content {
+  justify-items: left;
+}
+
+.btn-disabled {
+  background-color: gainsboro !important;
+}
+
+.cart-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #ccc;
+}
+
+.cart-header h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.item-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.item-info img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.item-actions {
+  text-align: right;
+}
+
+.item-actions .price {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.cart-footer {
+  text-align: right;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
