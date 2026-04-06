@@ -68,9 +68,10 @@ export default function CartList() {
         <div className='cart-footer'>
             Total : ${(cartItems.reduce((sum,item)=> item.quantity? sum+item.price* item.quantity: sum+item.price,0)).toFixed(2)}
         </div>
+        <button className='btn' onClick={handlePlaceholder}>Place Order</button>
     </div>
 
-    <button className='btn' onClick={handlePlaceholder}>Place Order</button>
+   
 
     </>
   )
